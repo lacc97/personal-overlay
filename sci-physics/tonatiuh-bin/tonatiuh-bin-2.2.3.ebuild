@@ -15,6 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="-bundled-libs"
+RESTRICT="strip"
 
 DEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4
