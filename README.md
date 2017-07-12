@@ -1,2 +1,2 @@
-# personal-overlay
+# Gentoo overlay
 Gentoo overlay
