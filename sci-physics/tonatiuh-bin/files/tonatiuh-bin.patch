@@ -1,0 +1,14 @@
+diff --git a/Tonatiuh-linux/Tonatiuh.sh b/Tonatiuh-linux-patch/Tonatiuh.sh
+index 896bc12..38157c0 100755
+--- a/Tonatiuh-linux/Tonatiuh.sh
++++ b/Tonatiuh-linux-patch/Tonatiuh.sh
+@@ -1,6 +1,6 @@
+ #!/bin/bash
+ 
+-RAIZ=`dirname "$0"`
+-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RAIZ/bin/release
++RAIZ=/usr
++export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RAIZ/libexec/tonatiuh
+ 
+-"$RAIZ"/bin/release/Tonatiuh
++"$RAIZ"/libexec/tonatiuh/Tonatiuh
