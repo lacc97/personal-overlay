@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="dev-qt/qtcore:5
+	dev-qt/qtgui:5
 	app-text/poppler[qt5]
 	>=app-text/hunspell-1.2.8"
 DEPEND="${RDEPEND}
