@@ -1,6 +1,5 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id$
 
 EAPI=6
 
@@ -20,7 +19,3 @@ RDEPEND="dev-qt/qtcore:5
 DEPEND="${RDEPEND}
 	 app-arch/unzip"
 S="${WORKDIR}/${PN}-release-${PV}"
-
-#src_unpack() {
-#	unpack texworks-${A}
-#}
