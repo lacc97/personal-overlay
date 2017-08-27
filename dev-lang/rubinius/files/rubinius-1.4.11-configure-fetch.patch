@@ -1,0 +1,16 @@
+diff --git a/configure b/configure
+index 51d98a7..f027fe9 100755
+--- a/configure
++++ b/configure
+@@ -1816,10 +1816,9 @@ int main() { return tgetnum(""); }
+     set_filesystem_paths
+ 
+     process
++    fetch_gems
+     if @release_build
+       verify_gems
+-    else
+-      fetch_gems
+     end
+     setup_gems
+     write_configure_files
