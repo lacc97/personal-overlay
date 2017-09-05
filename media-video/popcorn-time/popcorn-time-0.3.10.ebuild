@@ -67,7 +67,7 @@ NWJS_VER="0.24.3"
 
 src_prepare() {
 	sed -i -e "s_\"guppy-pre-commit\": \"^0.3.0\"_\"guppy-pre-commit\": \"^0.4.0\"_" package.json
-	sed -i -e "s/const nwVersion = '0.18.1'/const nwVersion = '${NWJS_VER}'/" gulpfile.js
+	sed -i -e "s/const nwVersion.*/const nwVersion = '${NWJS_VER}'/" gulpfile.js
 	sed -i -e "s_https://get.popcorntime.sh/repo/nw/_https://dl.nwjs.io/_" gulpfile.js
 	
 	eapply_user
