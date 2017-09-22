@@ -38,6 +38,14 @@ DEPEND="${RDEPEND}
 # }
 
 src_prepare() {
+	sed -i -e "s/SDL_sound/SDL_sound_ancurio/" SDL_sound.pc.in
+	sed -i -e "s/libSDL_sound/libSDL_sound_ancurio/" Makefile.am
+	sed -i -e "s/SDL_sound.pc/SDL_sound_ancurio.pc/" Makefile.am
+	sed -i -e "s/SDL_sound.pc/SDL_sound_ancurio.pc/" configure.in
+	sed -i -e 's/AM_INIT_AUTOMAKE(SDL_sound, $VERSION)/AM_INIT_AUTOMAKE(SDL_sound_ancurio, $VERSION)/' configure.in
+	
+	mv SDL_sound.pc.in SDL_sound_ancurio.pc.in
+	
 	./bootstrap
 }
 

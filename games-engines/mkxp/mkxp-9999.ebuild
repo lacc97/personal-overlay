@@ -17,7 +17,7 @@ MRI_VERSION=2.4
 
 RDEPEND="
 	dev-lang/ruby:${MRI_VERSION}
-	>dev-games/physfs-2.0
+	>=dev-games/physfs-2.1
 	dev-libs/boost
 	dev-libs/libsigc++
 	media-libs/openal
@@ -33,6 +33,12 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	app-editors/vim
 	virtual/pkgconfig"
+
+src_prepare() {
+	sed -i -e "s/REQUIRED SDL_sound/REQUIRED SDL_sound_ancurio/" CMakeLists.txt
+	
+	eapply_user
+}
 
 src_configure() {
 	local mycmakeargs=(
