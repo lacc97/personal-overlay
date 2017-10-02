@@ -37,7 +37,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	sed -i -e "s/REQUIRED SDL_sound/REQUIRED SDL_sound_ancurio/" CMakeLists.txt
 	
-	eapply_user
+	cmake-utils_src_prepare
 }
 
 src_configure() {
