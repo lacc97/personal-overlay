@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit cmake-utils
+inherit cmake-utils xdg-utils
 
 DESCRIPTION="Environment for authoring TeX/LaTeX/ConTeXt with focus on usability"
 HOMEPAGE="https://www.tug.org/texworks/"
@@ -20,3 +20,11 @@ RDEPEND="dev-qt/qtcore:5
 DEPEND="${RDEPEND}
 	 app-arch/unzip"
 S="${WORKDIR}/${PN}-release-${PV}"
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
+}
