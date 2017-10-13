@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit versionator eutils
+inherit versionator eutils xdg-utils
 
 DESCRIPTION="Adobe Flash standalone player"
 HOMEPAGE="https://www.adobe.com/support/flashplayer/debug_downloads.html"
@@ -39,4 +39,12 @@ src_install() {
 	dobin flashplayer
 	
 	make_desktop_entry flashplayer 'Adobe Flash Player' 'application-x-shockwave-flash' 'AudioVideo;Video;' 'MimeType=application/x-shockwave-flash'
+}
+
+pkg_postinst() {
+	xdg_desktop_database_update
+}
+
+pkg_postrm() {
+	xdg_desktop_database_update
 }
