@@ -31,7 +31,7 @@ RDEPEND="
 	virtual/opengl
 	x11-libs/pixman"
 DEPEND="${RDEPEND}
-	app-editors/vim
+	app-editors/vim-core
 	virtual/pkgconfig"
 
 src_prepare() {
