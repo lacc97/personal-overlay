@@ -50,9 +50,9 @@ S=${WORKDIR}/DiscordCanary
 RESTRICT="mirror bindist"
 
 QA_PREBUILT="
-	opt/discord/share/discord/Discord
-	opt/discord/share/discord/libnode.so
-	opt/discord/share/discord/libffmpeg.so
+	opt/discord-canary/DiscordCanary
+	opt/discord-canary/libnode.so
+	opt/discord-canary/libffmpeg.so
 "
 
 src_prepare() {
